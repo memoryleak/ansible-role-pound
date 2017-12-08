@@ -1,0 +1,21 @@
+---
+# tasks file for memoryleak.pound
+
+- name: Add the OS specific varibles
+  include_vars: "{{ ansible_os_family }}.yml"
+  tags: ['include']
+
+- name: Install Pound.
+  package: 
+    name: "{{ pound_package }}"
+    state: present
+  tags: ['package']
+
+- name: Setup Pound configuration
+  template: 
+    dest: "{{ pound_config }}"
+    group: "{{ pound_group }}"
+    mode: 0644
+    owner: "{{ pound_user }}"
+    src: pound.cfg.j2
+  tags: ['template']

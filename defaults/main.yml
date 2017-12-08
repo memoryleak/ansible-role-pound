@@ -1,0 +1,8 @@
+---
+# defaults file for memoryleak.pound
+pound_service: pound
+pound_log_level: 3
+pound_listen_http_address: 0.0.0.0
+pound_listen_http_port: 443
+pound_backend_servers: 
+  - [ '127.0.0.1', '80' ]

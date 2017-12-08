@@ -1,0 +1,6 @@
+---
+pound_service: pound
+pound_config: /etc/pound.cfg
+pound_control_socket: /var/lib/pound/pound.cfg
+pound_user: pound
+pound_group: pound
