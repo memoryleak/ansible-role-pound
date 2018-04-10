@@ -9,7 +9,11 @@ Control "{{ pound_control_socket }}"
 
 ListenHTTP
   Address {{ pound_listen_http_address }}
-  Port	{{ pound_listen_http_port }}
+  Port {{ pound_listen_http_port }}
+  Cert    "{{ pound_listen_cert }}"
+  {% for header in pound_listen_headers %}
+  AddHeader "{{ header }}"
+  {% endfor %} 
 
   Service
     BackEnd
