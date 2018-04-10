@@ -7,7 +7,7 @@ LogLevel {{ pound_log_level }}
 
 Control "{{ pound_control_socket }}"
 
-ListenHTTP
+ListenHTTPS
   Address {{ pound_listen_http_address }}
   Port {{ pound_listen_http_port }}
   Cert    "{{ pound_listen_cert }}"

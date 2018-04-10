@@ -1,5 +1,6 @@
 ---
 # defaults file for memoryleak.pound
+pound_package: Pound
 pound_service: pound
 pound_log_level: 3
 pound_listen_cert: /etc/pki/tls/certs/pound.pem
